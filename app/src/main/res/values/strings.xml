@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Attendance System</string>
+    <string name="attendance_system">Attendance System</string>
+    <string name="enter_username">enter username</string>
+    <string name="enter_password">enter password</string>
+    <string name="login">Login</string>
+    <string name="attendancelogo">attendancelogo</string>
+    <string name="attendancepng">attendancepng</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="add_remove_teacher">Add/Remove Teacher</string>
+    <string name="add_remove_student">Add/Remove Student</string>
+    <string name="create_attendance">Create Attendance</string>
+    <string name="attendance_record">Attendance Record</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="enter_subject">enter subject</string>
+    <string name="enter_teacher_s_name">enter teacher\'s name</string>
+    <string name="register_teacher">Register Teacher</string>
+    <string name="enter_class">enter class</string>
+    <string name="register">register</string>
+    <string name="register_student">Register Student</string>
+    <string name="enter_name">enter name</string>
+    <string name="enter_user_id">enter user id</string>
+</resources>
