@@ -21,4 +21,6 @@
     <string name="register_student">Register Student</string>
     <string name="enter_name">enter name</string>
     <string name="enter_user_id">enter user id</string>
+    <string name="select_date">select date</string>
+    <string name="enter_new_password">enter new password</string>
 </resources>

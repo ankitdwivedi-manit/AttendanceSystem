@@ -41,7 +41,7 @@
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/etEnterUserId"
+        android:id="@+id/etEnterTeacherUserId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -59,7 +59,7 @@
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/etEnterPassword"
+        android:id="@+id/etEnterTeacherPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -77,7 +77,7 @@
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/btnTeacherRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

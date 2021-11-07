@@ -1,5 +1,6 @@
 package com.example.attendancesystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -11,8 +12,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class StudentRegister extends AppCompatActivity {
 
@@ -76,9 +80,25 @@ public class StudentRegister extends AppCompatActivity {
             student.setBatch(txtBatch.getText().toString());
             student.setPassword(txtPassword.getText().toString());
             student.setScholar_no(txtScholar_no.getText().toString());
-            databaseReference.child(student.getScholar_no()).setValue(student);
-            Toast.makeText(this, "Student added successfully!", Toast.LENGTH_SHORT).show();
-            clearField();
+
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.hasChild(student.getScholar_no())){
+                        txtScholar_no.setError("Enter valid scholar_no");
+                        Toast.makeText(StudentRegister.this, "Enter valid scholar_no", Toast.LENGTH_SHORT).show();
+                    }else{
+                        databaseReference.child(student.getScholar_no()).setValue(student);
+                        Toast.makeText(StudentRegister.this, "Student added successfully!", Toast.LENGTH_SHORT).show();
+                        clearField();
+                    }
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
         }
     }
 

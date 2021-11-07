@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class AdminMain extends AppCompatActivity {
 
-    Button adminAddTeacher, adminAddStudent, adminChangePassword, adminLogout;
+    Button adminAddTeacher, adminAddStudent, adminChangePassword, adminLogout, adminCreateAttendance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,15 @@ public class AdminMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminMain.this, StudentRegister.class);
+                startActivity(intent);
+            }
+        });
+
+        adminCreateAttendance = (Button)findViewById(R.id.btnAdminCreateAttendance);
+        adminCreateAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminMain.this, CreateAttendance.class);
                 startActivity(intent);
             }
         });
